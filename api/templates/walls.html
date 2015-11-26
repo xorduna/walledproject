@@ -1,0 +1,15 @@
+<html>
+<body>
+	<h1> Welcome to Wall administration </h1>
+
+	<a href="/admin/walls/new">new wall</a>
+
+	<table>
+		{% for wall in walls %}
+
+		<tr><td>{{ wall['id'] }}</td><td>{{ wall['name'] }}</td><td><a href="/admin/walls/{{ wall['id'] }}">edit</a> -  <a href="/admin/walls/delete/{{ wall['id'] }}">delete</a><td></tr>
+		{% endfor %}
+	</table>
+
+</body>
+</html>
